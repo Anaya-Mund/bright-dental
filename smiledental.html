@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Smile Dental Clinic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #4CAF50;
+        }
+        /* Updated Hero Section */
+        .hero {
+            background: url('https://media.gettyimages.com/id/1395214924/photo/a-happy-woman-looking-herself-in-the-hand-held-mirror.jpg?s=612x612&w=0&k=20&c=QU86qued_SHFt26Rl1eMleRpAhCNUzMfHHt7I1JHyjs=') no-repeat center center/cover;
+            height: 400px; /* Set a fixed height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            background-size: cover; /* Ensure the image fully covers the container */
+        }
+        section {
+            padding: 20px;
+        }
+        .about, .services {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            width: 30%;
+            text-align: center;
+        }
+        .card img {
+            max-width: 100%;   /* Ensures the image fits within the container */
+            height: auto;      /* Maintains aspect ratio */
+            max-height: 200px; /* Adjusts max height to make it visually appropriate */
+            object-fit: cover; /* Ensures the image fills the space without distortion */
+            border-radius: 5px; /* Optional: adds rounded corners */
+        }
+        .cta {
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #f1f1f1;
+        }
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0,0,0,0.4); 
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; 
+            max-width: 500px;
+        }
+
+        .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        form input {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bright Smile Dental Clinic</h1>
+        <p>Transforming Smiles, Transforming Lives</p>
+    </header>
+
+    <nav>
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="hero">
+        <h1>Expert Dental Care for Every Smile</h1>
+    </div>
+
+    <!-- About Us Section -->
+    <section id="about" class="visible">
+        <h2>About Us</h2>
+        <div class="about">
+            <!-- Our Team -->
+            <div class="card">
+                <img src="https://img.freepik.com/free-photo/medical-theme-portrait-group-doctors-reception-diagnostic-center-hospital_627829-6537.jpg?t=st=1732776374~exp=1732779974~hmac=04f47262d5e648650b3c04e3a5db44f0f51dfe516a0c40f40abc71388d4c27c1&w=1800" alt="Our Team">
+                <h3>Meet Our Team</h3>
+                <p>Our highly trained professionals are committed to providing the best care.</p>
+            </div>
+            <!-- Our Clinic -->
+            <div class="card">
+                <img src="https://img.freepik.com/free-photo/stomatology-office-with-modern-equipment-nurse-wearing-blue-uniform-working-computer_482257-12534.jpg?t=st=1732776944~exp=1732780544~hmac=5e6363debcb5e53c3b3300c460fbb393cbfb1d91673571557e7b2b657bc76a31&w=1800" alt="Our Clinic">
+                <h3>Our Clinic</h3>
+                <p>State-of-the-art facilities for your utmost comfort and convenience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services">
+            <!-- Teeth Whitening -->
+            <div class="card">
+                <img src="https://media.istockphoto.com/id/1306143796/photo/see-what-good-dental-health-can-do-for-your-smile.jpg?s=612x612&w=0&k=20&c=pCH-cPzo76nGorXPk6FvKM5zQugWT8_fk3kswH-RKt8=" alt="Teeth Whitening">
+                <h3>Teeth Whitening</h3>
+                <p>Get a brighter smile with professional whitening treatments.</p>
+            </div>
+
+            <!-- Orthodontics -->
+            <div class="card">
+                <img src="https://cdn.pixabay.com/photo/2015/10/21/05/26/dentist-998830_1280.jpg" alt="Orthodontics">
+                <h3>Orthodontics</h3>
+                <p>Braces and aligners to straighten your teeth for a beautiful smile.</p>
+            </div>
+
+            <!-- General Dentistry -->
+            <div class="card">
+                <img src="https://img.freepik.com/free-photo/dentist-doing-dental-treatment-intervention-senior-woman-elderly-patient-medical-examination-with-dentist-dental-office-with-orange-equipment_482257-12560.jpg?t=st=1732776567~exp=1732780167~hmac=c7447addc510cf4e08f8fd40ab04fe8d5a972dd4fa61eb562600d6d65e16cac0&w=1800" alt="General Dentistry">
+                <h3>General Dentistry</h3>
+                <p>Comprehensive dental care for the entire family.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Contact Section (link to open modal) -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions? Get in touch with us!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Bright Smile Dental Clinic. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("contactModal");
+
+        // Get the button that opens the modal
+        var contactButton = document.querySelector('.nav-link[href="#contact"]');
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the "Contact" link, open the modal
+        contactButton.onclick = function(event) {
+            event.preventDefault();
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
